@@ -1,0 +1,21 @@
+{
+  "name": "kong-e2e-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server:start": "docker-compose up -d",
+    "server:stop": "docker-compose down",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.0.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

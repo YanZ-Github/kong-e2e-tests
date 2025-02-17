@@ -24,4 +24,10 @@ npm run cy:run
 ```
 
 ## GitHub CI
-A PR targeting to the main branch will trigger the workflow main.yml. The workflow will startup the KongGateway and exec the cypress script gateway.cy.js.
+- A PR targeting to the main branch will trigger the workflow main.yml. 
+- The workflow will startup the KongGateway and exec the cypress script gateway.cy.js.
+
+## Assumptions
+- The Kong Manager UI remains consistent.
+- No concurrent TA case running together with this test suit.
+- No need to encapsulate page object.

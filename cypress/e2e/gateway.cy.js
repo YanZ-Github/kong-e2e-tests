@@ -27,7 +27,7 @@ describe('template spec', () => {
     cy.get('.sidebar-menu-toggle').click();
     cy.get('[data-testid="sidebar-item-routes"] > .sidebar-item-link > .sidebar-item-display > .sidebar-item-name-container > .sidebar-item-name').click();
     cy.get('[data-testid="empty-state-action"]').click();
-    
+
     // Input route data and save.
     cy.get('[data-testid="route-form-name"]').type('test-route');
     cy.get('[data-testid="route-form-paths-input-1"]').type('/mytest');
@@ -42,39 +42,39 @@ describe('template spec', () => {
 
   it('should clean all the generated data', () => {
     // Navigate to gateway service.
-    cy.get('.workspace-name').click();    
+    cy.get('.workspace-name').click();
     cy.get('.sidebar-menu-toggle').click();
     cy.get('[data-testid="sidebar-item-routes"] > .sidebar-item-link > .sidebar-item-display > .sidebar-item-name-container > .sidebar-item-name').click();
 
-    //filter
+    // Filter
     cy.get('[data-testid="filter-button"]').click();
     cy.get('[data-testid="name"] > .menu-item-title').click();
     cy.get('#filter-name').type('test-route');
     cy.get('[data-testid="name"] > .menu-item-buttons > [data-testid="apply-filter"]').click();
 
-    //go to the route detailed page to delete it.
+    // Navigate to the route detailed page to delete it.
     cy.get('b').click();
     cy.get('[data-testid="header-actions"]').click();
     cy.get('.danger > [data-testid="entity-button"] > .dropdown-item-trigger-label').click();
     cy.get('[data-testid="confirmation-input"]').type('test-route');
     cy.get('[data-testid="modal-action-button"]').click();
 
-    //Navigate to routes.
+    // Navigate to routes.
     cy.get('.sidebar-menu-toggle').click();
     cy.get('[data-testid="sidebar-item-gateway-services"] > .sidebar-item-link > .sidebar-item-display > .sidebar-item-name-container > .sidebar-item-name').click();
 
-    //filter
+    // Filter
     cy.get('[data-testid="filter-button"]').click();
     cy.get('[data-testid="name"] > .menu-item-title').click();
     cy.get('#filter-name').type('test-service');
     cy.get('[data-testid="name"] > .menu-item-buttons > [data-testid="apply-filter"]').click();
 
-    //go to the service detailed page to delete it.
+    // Navigate to the service detailed page to delete it.
     cy.get('b').click();
     cy.get('[data-testid="header-actions"]').click();
     cy.get('.danger > [data-testid="entity-button"] > .dropdown-item-trigger-label').click();
     cy.get('[data-testid="confirmation-input"]').type('test-service');
     cy.get('[data-testid="modal-action-button"]').click();
-    
+
   });
 });
